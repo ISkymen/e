@@ -1,0 +1,17 @@
+.kss-style pre {
+  overflow: auto;
+}
+
+.kss-markup summary{
+  outline: 0;
+}
+
+.kss-description {
+  font-size: 1.3em;
+}
+
+.kss-modifier__description, .kss-parameters__description {
+  b {
+    color: #a40001;
+  }
+}

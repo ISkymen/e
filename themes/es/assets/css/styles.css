@@ -1,0 +1,63 @@
+/*
+Mixins
+
+Mixins for susy
+
+Style guide: common.1-grid.mixins
+
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/*
+
+container($width, $config, $debug)
+
+Creates a container with parameters.
+
+$width  - Width of container in "span" format.
+$config - Susy config (span, gutter, color of background grid).
+$debug  - Show background grid if "true".
+
+Styleguide common.1-grid.mixins.container
+
+*/
+/*
+
+span($span, $config)
+
+Creates a container with parameters.
+
+$span  - Width of container in "column".
+$config - Susy config (span, gutter, color of background grid).
+
+Styleguide common.1-grid.mixins.container
+
+*/
+.layout-container {
+  margin: 0 auto;
+  max-width: 100%;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="url(%23susy-svg-gradient)" width="100%" %3E%3Cdefs%3E%3ClinearGradient spreadMethod="pad" id="susy-svg-gradient" x1="0%" y1="0%" x2="100%" y2="0%"%3E%3Cstop offset="0%" style="stop-color:rgba(19, 122, 243, 0.3);" /%3E%3Cstop offset="100%" style="stop-color:rgba(19, 122, 243, 0.5);" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x="0" width="7.04225%" height="100%"/%3E%3Crect x="8.4507%" width="7.04225%" height="100%"/%3E%3Crect x="16.90141%" width="7.04225%" height="100%"/%3E%3Crect x="25.35211%" width="7.04225%" height="100%"/%3E%3Crect x="33.80282%" width="7.04225%" height="100%"/%3E%3Crect x="42.25352%" width="7.04225%" height="100%"/%3E%3Crect x="50.70423%" width="7.04225%" height="100%"/%3E%3Crect x="59.15493%" width="7.04225%" height="100%"/%3E%3Crect x="67.60563%" width="7.04225%" height="100%"/%3E%3Crect x="76.05634%" width="7.04225%" height="100%"/%3E%3Crect x="84.50704%" width="7.04225%" height="100%"/%3E%3Crect x="92.95775%" width="7.04225%" height="100%"/%3E%3C/svg%3E') no-repeat scroll;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .layout-container::after {
+    clear: both;
+    content: ' ';
+    display: table; }
+
+.layout-content {
+  width: 66.19718%;
+  float: right;
+  margin-right: 0;
+  float: right; }
+
+.layout-sidebar-first {
+  width: 15.49296%;
+  float: left;
+  margin-right: 1.40845%; }
+
+body {
+  background: yellow; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+uuid: 9fe54150-1488-4c93-991e-f7c4e7a89a6b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - es_unit
+_core:
+  default_config_hash: naj-XGDLEFp5252ccKjQhiCFK8w-NKXbWF8ZVj9mUJI
+name: Options
+vid: options
+description: 'Stores the Unit options'
+hierarchy: 0
+weight: 0

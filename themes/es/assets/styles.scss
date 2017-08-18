@@ -1,0 +1,14 @@
+// Promo Card
+//
+// This promo card is used to promote content on the site.
+//
+// :hover - Hover state for the promo card.
+//
+// Style guide: components.card.promo
+
+@import "styles/common/variables";
+@import "styles/common/susy";
+@import "styles/common/layout";
+body {
+  background: yellow;
+}

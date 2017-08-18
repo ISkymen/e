@@ -1,0 +1,14 @@
+uuid: 02ed121d-43ea-46bf-8f01-26850f2d30b5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - es_unit
+_core:
+  default_config_hash: wtdnCVghMZ6ISv40Qgs63Cjd-BKaNz9uhWSXWBCuppY
+name: Models
+vid: models
+description: 'Stores the Unit model'
+hierarchy: 0
+weight: 0

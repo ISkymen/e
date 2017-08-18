@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - es_unit
+name: Categories
+vid: categories
+description: 'Stores the Unit categories'
+hierarchy: 0
+weight: 0

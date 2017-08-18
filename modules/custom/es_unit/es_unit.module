@@ -1,0 +1,35 @@
+<?php
+
+use \Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function es_unit_theme() {
+  return [
+    'unit' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for unit templates.
+ */
+function template_preprocess_unit(&$variables) {
+  // Helpful $content variable for templates.
+  $variables['content'] = [];
+  $variables['unit'] = [];
+
+  $variables['unit']['id'] = $variables['elements']['#unit']->id();
+  $variables['unit']['seller_block'] = views_embed_view('user_info', 'block_1', $variables['unit']['id']);
+
+  $variables['unit']['label'] = $variables['elements']['#unit']->label();
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+function es_unit_theme_suggestions_unit_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'unit__' . $variables['elements']['#view_mode'];
+}

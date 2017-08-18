@@ -1,0 +1,12 @@
+uuid: 9c77054b-9db5-4472-a317-13f448b938d0
+langcode: en
+status: false
+dependencies:
+  module:
+    - es_unit
+_core:
+  default_config_hash: aZVZzdQZdR-WBNW0GzyCpSeU3XJAZloX5FUNlqpmX7c
+id: unit.promo
+label: Promo
+targetEntityType: unit
+cache: true

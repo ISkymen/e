@@ -1,0 +1,12 @@
+unit:
+  title: 'Unit'
+  description: 'Menu for Unit entities'
+  parent: system.admin_structure
+  route_name: unit
+
+entity.unit.collection:
+  title: 'Unit'
+  route_name: entity.unit.collection
+  description: 'Unit entities'
+  parent: unit
+  weight: 10

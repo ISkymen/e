@@ -6,6 +6,6 @@ sites/*/services*.yml
 sites/*/files
 sites/*/private
 
-gulp/node_modules
+*/node_modules
 .idea/
 

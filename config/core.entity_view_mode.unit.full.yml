@@ -1,0 +1,12 @@
+uuid: 8c1ab2a3-3d79-4922-a708-b012dfa7ae53
+langcode: en
+status: false
+dependencies:
+  module:
+    - es_unit
+_core:
+  default_config_hash: 5cpLfofe-29bS4K0vVXdyMk6IlC5UdzX8D3Uk8WfGSw
+id: unit.full
+label: 'Full content'
+targetEntityType: unit
+cache: true

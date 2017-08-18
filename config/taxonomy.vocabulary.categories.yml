@@ -1,0 +1,14 @@
+uuid: f51f5fb3-d6a9-443c-b7a0-d4ec3d2dd897
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - es_unit
+_core:
+  default_config_hash: KRMjyT-uFV7ljw6Vkh_leYS5ixmAybeBJrm7XKd2nU0
+name: Categories
+vid: categories
+description: 'Stores the Unit categories'
+hierarchy: 0
+weight: 0

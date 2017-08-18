@@ -1,0 +1,7 @@
+unit:
+  path: 'unit'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Unit'
+  requirements:
+    _permission: 'administer content types'

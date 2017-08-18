@@ -1,0 +1,5 @@
+entity.unit.add_form:
+  route_name: entity.unit.add_form
+  title: 'Add Unit'
+  appears_on:
+    - entity.unit.collection

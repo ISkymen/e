@@ -1,0 +1,5 @@
+name: Export Seller unit
+type: module
+description: Module for Export Seller unit
+core: 8.x
+package: Export Seller
