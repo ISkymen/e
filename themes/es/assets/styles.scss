@@ -6,9 +6,13 @@
 //
 // Style guide: components.card.promo
 
+@import "styles/common/breakpoints";
 @import "styles/common/variables";
 @import "styles/common/susy";
 @import "styles/common/layout";
+@import "styles/unit/unit";
+@import "components";
 body {
-  background: yellow;
+  //background: yellow;
+  line-height: 1.4;
 }

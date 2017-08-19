@@ -22,7 +22,7 @@ function template_preprocess_unit(&$variables) {
   $variables['unit'] = [];
 
   $variables['unit']['id'] = $variables['elements']['#unit']->id();
-  $variables['unit']['seller_block'] = views_embed_view('user_info', 'block_1', $variables['unit']['id']);
+  $variables['unit']['seller_block'] = views_embed_view('user', 'block_seller', 2);
 
   $variables['unit']['label'] = $variables['elements']['#unit']->label();
   foreach (Element::children($variables['elements']) as $key) {

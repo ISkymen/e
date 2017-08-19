@@ -227,7 +227,7 @@ class unitEntity extends ContentEntityBase {
                 'prefix' => '€ '
             ))
             ->setDisplayOptions('view', array(
-                'label' => 'above',
+                'label' => 'hidden',
                 'type' => 'string',
                 'weight' => 4,
             ))
@@ -246,7 +246,7 @@ class unitEntity extends ContentEntityBase {
                 'suffix' => ' km'
             ))
             ->setDisplayOptions('view', array(
-                'label' => 'above',
+                'label' => 'hidden',
                 'type' => 'string',
                 'weight' => 4,
             ))

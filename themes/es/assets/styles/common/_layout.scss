@@ -5,10 +5,10 @@
 }
 
 .layout-content {
-  @include span(8 last);
+  @include span(9 last);
   float: right;
 }
 
 .layout-sidebar-first {
-  @include span(2);
+  @include span(3);
 }

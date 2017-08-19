@@ -1,0 +1,50 @@
+<div class="es-unit">
+  <header class="es-unit__header">
+    <h1 class="es-unit__title">
+      {{ unit.label }}
+    </h1>
+    <div class="es-unit__info">
+      <div class="es-unit__info-eur">
+        {{ content.price }}
+      </div>
+      <div class="es-unit__info-km">
+        {{ content.kilometers }}
+      </div>
+    </div>
+  </header>
+
+  <div class="es-unit__image es-carousel">
+    {{ content.image }}
+  </div>
+  <div class="es-unit__seller es-infoblock es-infoblock--seller">
+    <h3 class="es-infoblock__title">{{ 'Seller information'|trans }}</h3>
+    <div class="es-infoblock__content">
+      {{ unit.seller_block }}
+    </div>
+  </div>
+  <div class="es-unit__spec es-infoblock es-infoblock--specs">
+    <h3 class="es-infoblock__title">{{ 'Specification'|trans }}</h3>
+    <div class="es-infoblock__content">
+      {{ content.category }}
+      {{ content.type }}
+      {{ content.year }}
+      {{ content.transmission }}
+      {{ content.gears }}
+      {{ content.fuel }}
+      {{ content.cylinder }}
+      {{ content.cylinder_capacity }}
+      {{ content.hp }}
+      {{ content.weight }}
+      {{ content.chairs }}
+      {{ content.doors }}
+      {{ content.specialities }}
+      {{ content.options }}
+    </div>
+  </div>
+</div>
+
+
+<div class="es-unit__information es-infoblock es-infoblock--full-descr">
+  <h3 class="es-infoblock__title">{{ 'Object information'|trans }}</h3>
+  {{ content.full_description }}
+</div>

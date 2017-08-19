@@ -1,0 +1,38 @@
+.es-infoblock {
+
+  &__title {
+    margin: 0 0 10px;
+  }
+
+  &--specs {
+    .field {
+      padding: 5px 0;
+      &:nth-child(2n) {
+        background: #eee;
+      }
+      &__label {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 150px;
+      }
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &--seller {
+    background: lightgrey;
+    padding: 10px;
+    clear: both;
+    
+    @include tablet {
+      float: left;
+    }
+    @include desktop {
+      clear: none;
+      float: right;
+    }
+  }
+}
