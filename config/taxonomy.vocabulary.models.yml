@@ -10,5 +10,5 @@ _core:
 name: Models
 vid: models
 description: 'Stores the Unit model'
-hierarchy: 0
+hierarchy: 1
 weight: 0

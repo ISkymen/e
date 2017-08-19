@@ -1,0 +1,176 @@
+uuid: 5ae26ecd-8ffe-4a88-a2a4-61f5a211cbfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.unit.promo
+  module:
+    - es_unit
+    - image
+id: unit.unit.promo
+targetEntityType: unit
+bundle: unit
+mode: promo
+content:
+  category:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  chairs:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  cylinder:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  cylinder_capacity:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  doors:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  fuel:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  full_description:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  gears:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  hp:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  image:
+    label: hidden
+    type: image
+    weight: -4
+    region: content
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  kilometers:
+    label: hidden
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  model:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  options:
+    label: hidden
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  price:
+    label: hidden
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  short_description:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  specialities:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  transmission:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: above
+    type: entity_reference_label
+    weight: -3
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+  weight:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  year:
+    label: above
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }
