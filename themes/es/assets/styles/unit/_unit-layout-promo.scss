@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+// Promo Card
+//
+// Base class <b>.es-card-promo</b>. This card is used to promote content on the site.
+//
+// :hover - Hover state for the promo card.
+// .es-card-promo--narrow - Modifier for "narrow version" of the promo card.
+// .es-card-promo--margin - Modifier for the promo card in carousel.
+//
+// Markup: card-promo.twig
+//
+// Style guide: components.cards.2-card-promo
+
+.es-card-promo {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  box-shadow: 1px 1px 3px 0 #777;
+  background: lightgrey;
+  transition: 0.2s all ease-in-out;
+  outline: 0;
+  margin: 2% 0.5%;
+
+  @include tablet {
+    width: 31%;
+  }
+
+  @include desktop {
+    width: 19%;
+  }
+
+  &__image {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+
+  &__specs {
+    font-size: 14px;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 0;
+    outline: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 2px 2px deepskyblue;
+  }
+
+  &--narrow {
+    max-width: 200px;
+  }
+
+  &--margin {
+    margin: 5px 10px;
+  }
+}

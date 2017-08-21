@@ -40,7 +40,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   admin_permission = "administer unit entities",
  *   entity_keys = {
  *     "id" = "id",
- *     "label" = "label",
+ *     "label" = "id",
  *   },
  *   links = {
  *     "canonical" = "/unit/{unit}",
@@ -435,12 +435,15 @@ class unitEntity extends ContentEntityBase {
             ->setDescription(t('The Name of the associated user.'))
             ->setSetting('target_type', 'user')
             ->setSetting('handler', 'default')
+            ->setDefaultValueCallback('Drupal\es_unit\Entity\unitEntity::getCurrentUserId')
             ->setDisplayOptions('view', array(
                 'label' => 'above',
                 'type' => 'entity_reference_label',
                 'weight' => -3,
             ))
             ->setDisplayOptions('form', array(
+              // Hide field
+
                 'type' => 'entity_reference_autocomplete',
                 'settings' => array(
                     'match_operator' => 'CONTAINS',
@@ -502,4 +505,16 @@ class unitEntity extends ContentEntityBase {
 
         return $fields;
     }
+
+  /**
+   * Default value callback for 'user' base field definition.
+   *
+   * @see ::baseFieldDefinitions()
+   *
+   * @return array
+   *   An array of default values.
+   */
+  static function getCurrentUserId() {
+    return \Drupal::currentUser()->id();
+  }
 }

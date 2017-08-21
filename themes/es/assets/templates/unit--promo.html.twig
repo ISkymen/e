@@ -1,0 +1,17 @@
+<div class="es-card-promo">
+  <div class="es-card-promo__image">
+    {{ content.image.0 }}
+  </div>
+  <div class="es-card-promo__content">
+    <h3 class="es-card-promo__title">{{ content.model }}</h3>
+    <div class="es-card-promo__specs">
+      <p>{{ content.category }}</p>
+      <p>{{ content.kilometers }} km</p>
+      <p>{{ content.year }}</p>
+    </div>
+    <div class="es-card-promo__price">
+      {{ content.price }}
+    </div>
+  </div>
+  <a class="es-card-promo__link"href="/unit/{{ unit.id }}"></a>
+</div>

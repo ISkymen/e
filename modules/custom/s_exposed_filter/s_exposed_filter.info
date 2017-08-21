@@ -1,0 +1,6 @@
+name = Exposed Filter
+description = Additional filter for Views.
+core = 7.x
+
+files[] = s_exposed_filter_handler_filter_year.inc
+files[] = s_exposed_filter.views.inc

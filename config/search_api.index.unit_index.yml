@@ -1,0 +1,94 @@
+uuid: aa14bc3c-b78f-4889-8988-c11a4ab1a4be
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - search_api
+    - es_unit
+  config:
+    - search_api.server.local_server
+    - core.entity_view_mode.unit.full
+id: unit_index
+name: 'Unit index'
+description: ''
+read_only: false
+field_settings:
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:unit':
+          unit: full
+  price:
+    label: Price
+    datasource_id: 'entity:unit'
+    property_path: price
+    type: integer
+  cylinder_capacity:
+    label: 'Cylinder capacity'
+    datasource_id: 'entity:unit'
+    property_path: cylinder_capacity
+    type: integer
+  category:
+    label: Category
+    datasource_id: 'entity:unit'
+    property_path: category
+    type: integer
+  year:
+    label: Year
+    datasource_id: 'entity:unit'
+    property_path: year
+    type: integer
+  full_description:
+    label: 'Full description'
+    datasource_id: 'entity:unit'
+    property_path: full_description
+    type: text
+  model:
+    label: Model
+    datasource_id: 'entity:unit'
+    property_path: 'model:entity:name'
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  kilometers:
+    label: Кilometers
+    datasource_id: 'entity:unit'
+    property_path: kilometers
+    type: integer
+  category_name:
+    label: 'Category Name'
+    datasource_id: 'entity:unit'
+    property_path: 'category:entity:name'
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:unit': {  }
+processor_settings:
+  aggregated_field: {  }
+  rendered_item: {  }
+  add_url: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - rendered_item
+      - full_description
+      - model
+      - category_name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: local_server

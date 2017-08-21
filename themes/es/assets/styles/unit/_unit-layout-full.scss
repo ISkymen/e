@@ -1,0 +1,106 @@
+.es-unit {
+
+  &__header {
+    @include span(12 last);
+    margin-bottom: 10px;
+
+    @include tablet {
+      @include span(9 of 9 last);
+      display: flex;
+      margin: 10px 0;
+    }
+  }
+
+  &__title {
+    @include span(12 last);
+    margin: 0;
+
+    @include tablet {
+      @include span(6);
+    }
+  }
+
+  &__info {
+    @include span(12 last);
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      @include span(6 last);
+    }
+
+    &-eur, &-km {
+      padding: 0 5px;
+      font-size: 1.3em;
+      text-align: center;
+
+      @include desktop {
+        font-size: 1.8em;
+      }
+    }
+
+    &-eur {
+      @include span(6);
+      background: #555;
+      color: white;
+    }
+    &-km {
+      @include span(6 last);
+      background: #999;
+      color: black;
+    }
+  }
+
+  &__image {
+    @include span(9 of 9);
+
+    @include desktop {
+      @include span(6 of 9);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__seller {
+    @include tablet {
+      @include span(4 of 9);
+    }
+    @include desktop {
+      @include span(3 of 9 last);
+    }
+
+  }
+
+  &__spec {
+    @include tablet {
+      @include span(5 of 9 last);
+    }
+    @include desktop {
+      @include span(3 of 9);
+    }
+
+  }
+
+  &__information {
+    @include tablet {
+      @include span(4 of 9 last);
+    }
+    @include desktop {
+      @include span(6 of 9 last);
+    }
+
+  }
+
+  &__cards {
+    @include tablet {
+      @include span(9 of 9 last);
+    }
+    @include desktop {
+      @include span(6 of 9 last);
+    }
+  }
+}
+

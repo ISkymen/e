@@ -1,0 +1,166 @@
+// Category picker item
+//
+// .es-category-picker__item - Element for category picker
+//
+// .es-category-picker__item:hover - Hovered element
+// .es-category-picker__item--all - Modifier for "All" unit
+// .es-category-picker__item--car - Modifier for "Car" unit
+// .es-category-picker__item--combi - Modifier for "Combi" unit
+// .es-category-picker__item--concrete_mixer - Modifier for "Concrete mixer" unit
+// .es-category-picker__item--freezetruck - Modifier for "Freezetruck" unit
+// .es-category-picker__item--jeep - Modifier for "Jeep" unit
+// .es-category-picker__item--refrigerated - Modifier for "Refrigerated" unit
+// .es-category-picker__item--semi_trailer - Modifier for Semi trailer" unit
+// .es-category-picker__item--silo_tank - Modifier for "Silo tank" unit
+// .es-category-picker__item--tank - Modifier for "Tank" unit
+// .es-category-picker__item--tipper_trailer - Modifier for "Tipper trailer" unit
+// .es-category-picker__item--tipper_truck - Modifier for "Tipper truck" unit
+// .es-category-picker__item--tractor - Modifier for "Tractor" unit
+// .es-category-picker__item--trailer - Modifier for "Trailer" unit
+// .es-category-picker__item--truck - Modifier for "Truck" unit
+// .es-category-picker__item--van - Modifier for "Van" unit
+// .es-category-picker__item--various - Modifier for "Various" unit
+//
+// Markup: category-picker.twig
+//
+// Styleguide components.category-picker
+
+@charset "UTF-8";
+.es-form--search .es-form__item.es-form-category--wide {
+  width: 100%;
+}
+
+
+.form-type-select {
+  width: 100%;
+  float: none !important;
+  height: 100px;
+}
+
+.es-category-picker {
+  display:        flex;
+  flex-direction: row;
+  flex-wrap:      wrap;
+  justify-content: space-between;
+  background: greenyellow;
+
+  &::after {
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 150px;
+  }
+}
+
+.es-category-picker__items {
+  display:        flex;
+  flex-direction: row;
+  flex-wrap:      wrap;
+  justify-content: space-between;
+}
+
+.es-category-picker--radio .es-form__item-widget {
+  display: none;
+}
+
+.es-category-picker__item {
+  box-sizing: border-box;
+  display: block;
+  padding:    5px;
+  width:      48%;
+  height: 105px;
+  text-align: center;
+  font-size: 0;
+  text-decoration: none;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.2s all ease-in-out;
+  color: #0b58a2;
+  font-weight: normal;
+  border: 1px solid #0b58a2;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  @include tablet {
+    width: 31%;
+  }
+
+  @include desktop {
+    width: 19%;
+  }
+  &:hover {
+    background: rgba(0, 140, 186, 0.3);
+    text-decoration: none;
+    color: #0b58a2;
+    font-size: 1em;
+  }
+
+  .es-form__item-widget:checked + & {
+      background: rgba(0, 140, 186, 0.7);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    margin: auto;
+  }
+
+  &--all::after {
+    @include sprite($type0);
+  }
+  &--car::after {
+    @include sprite($type1);
+  }
+  &--combi::after {
+    @include sprite($type2);
+  }
+  &--concrete_mixer::after {
+    @include sprite($type3);
+  }
+  &--freezetruck::after {
+    @include sprite($type4);
+  }
+  &--jeep::after {
+    @include sprite($type5);
+  }
+  &--refrigerated::after {
+    @include sprite($type6);
+  }
+  &--semi_trailer::after {
+    @include sprite($type7);
+  }
+  &--silo_tank::after {
+    @include sprite($type8);
+  }
+  &--tank::after {
+    @include sprite($type9);
+  }
+  &--tipper_trailer::after {
+    @include sprite($type1);
+  }
+  &--tipper_truck::after {
+    @include sprite($type2);
+  }
+  &--tractor::after {
+    @include sprite($type3);
+  }
+  &--trailer::after {
+    @include sprite($type4);
+  }
+  &--truck::after {
+    @include sprite($type5);
+  }
+  &--van::after {
+    @include sprite($type6);
+  }
+  &--various::after {
+    @include sprite($type7);
+  }
+}

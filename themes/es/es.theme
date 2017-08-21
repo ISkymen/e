@@ -1,0 +1,8 @@
+<?php
+
+function es_theme_suggestions_select_alter(&$suggestions, &$vars, $hook) {
+  $request = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
+  if (!empty($request)) {
+    $suggestions[] = 'select__' . $request;
+  }
+}

@@ -6,8 +6,8 @@ dependencies:
     - core.entity_view_mode.unit.full
   module:
     - es_unit
-    - image
     - options
+    - slick
     - taxonomy
     - text
 id: unit.unit.full
@@ -17,10 +17,11 @@ mode: full
 content:
   category:
     label: hidden
-    type: entity_reference_rss_category
+    type: entity_reference_label
     weight: 1
     region: content
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
   chairs:
     label: above
@@ -92,12 +93,77 @@ content:
     third_party_settings: {  }
   image:
     label: hidden
-    type: image
+    type: slick_image
     weight: -4
     region: content
     settings:
+      style: ''
+      optionset: main
+      optionset_thumbnail: thumbs
+      skin: default
+      skin_thumbnail: asnavfor
       image_style: ''
-      image_link: ''
+      thumbnail_style: thumbnail
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: full
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      grid_header: ''
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      iframe_lazy: true
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
     third_party_settings: {  }
   kilometers:
     label: hidden

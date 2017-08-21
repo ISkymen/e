@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+// Unit Card
+//
+// Base class <b>.es-card-unit</b>. This card is used to render search results.
+//
+// :hover - Hover state for the unit card.
+// .es-card-unit--narrow - Modifier fo "narrow version" of the unit card.
+//
+// Markup: card-unit.twig
+//
+// Style guide: components.cards.1-card-unit
+
+.es-card-unit {
+  position: relative;
+  padding: 20px 10px;
+  box-shadow: 1px 1px 3px 0 #777;
+  margin: 10px;
+  transition: 0.2s all ease-in-out;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__left {
+    @include tablet {
+      @include span(3);
+    }
+  }
+
+  &__center {
+    @include tablet {
+      @include span(6);
+    }
+  }
+
+  &__right {
+    text-align: right;
+    @include tablet {
+      @include span(3 last);
+    }
+  }
+
+  &__image {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &__title {
+    font-size: 26px;
+    margin-top: 0;
+  }
+
+  &__specs {
+    font-size: 14px;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 2px 2px deepskyblue;
+  }
+
+  &--narrow {
+    display: block;
+    width: 300px;
+
+    .es-card-unit__left,
+    .es-card-unit__center,
+    .es-card-unit__right {
+      @include tablet {
+        width: auto;
+        float: none;
+      }
+    }
+  }
+}

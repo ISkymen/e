@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for a select element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the <select> tag.
+ * - options: The <option> element children.
+ *
+ * @see template_preprocess_select()
+ */
+#}
+{% spaceless %}
+  {{ breakpoint() }}
+  <select{{ attributes.addClass('es-category-picker') }}>
+    {% for option in options %}
+    {% set classes = 'es-category-picker__item es-category-picker__item--'~option.label|lower|replace({" ": "-", "- ": "", " -": ""}) %}
+        <option{{ attributes.setAttribute('class', classes) }} value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+    {% endfor %}
+  </select>
+{% endspaceless %}

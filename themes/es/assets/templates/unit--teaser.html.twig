@@ -1,0 +1,35 @@
+<div class="es-card-unit">
+  <div class="es-card-unit__left">
+      <div class="es-card-unit__image">
+          {{ content.image.0 }}
+      </div>
+
+    <div class="es-card-unit__image-count">
+        {{ '18 pic fixme' }}
+    </div>
+  </div>
+  <div class="es-card-unit__center">
+    <h3 class="es-card-unit__title">
+            {{ unit.label }}
+    </h3>
+    <div class="es-card-unit__km">{{ content.kilometers }}</div>
+    <div class="es-card-unit__specs">
+        {{ content.year }}
+    </div>
+  </div>
+  <div class="es-card-unit__right">
+        <div class="es-card-unit__price">
+            {{ content.price }}
+        </div>
+
+      {% if content.price %}
+        <div class="es-card-unit__price-full">
+            {# @TODO fix VAT calculation #}
+            {#{{ content.price * 1.17 }}#}
+
+        </div>
+      {% endif %}
+  </div>
+  <a class="es-card-unit__link"href="/unit/{{ unit.id }}"></a>
+    {# TODO#}
+</div>

@@ -22,7 +22,11 @@ function template_preprocess_unit(&$variables) {
   $variables['unit'] = [];
 
   $variables['unit']['id'] = $variables['elements']['#unit']->id();
-  $variables['unit']['seller_block'] = views_embed_view('user', 'block_seller', 2);
+  $variables['unit']['user_id'] = ($variables['elements']['#unit']->user_id->entity)
+    ? $variables['elements']['#unit']->user_id->entity->id()
+    : null;
+  $variables['unit']['seller_block'] = views_embed_view('user', 'block_seller', $variables['unit']['user_id']);
+  $variables['unit']['unit_block'] = views_embed_view('cards', 'block_promo', $variables['unit']['user_id']);
 
   $variables['unit']['label'] = $variables['elements']['#unit']->label();
   foreach (Element::children($variables['elements']) as $key) {
